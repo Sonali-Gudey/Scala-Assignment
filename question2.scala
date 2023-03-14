@@ -13,12 +13,16 @@ object question2 {
         // Task 2: Top 5 players by run scored
         val top5PlayersByRuns = players.sortBy(_.Runs)(Ordering[Int].reverse).take(5)
         println("==> Top 5 players by run scored:")
-        top5PlayersByRuns.foreach(p => println(s" ${p.Name} from ${p.Country} with ${p.Runs} runs."))
+        top5PlayersByRuns.zipWithIndex.foreach { case (p, i) =>
+            println(s" ${i + 1}. ${p.Name} from ${p.Country} with ${p.Runs} runs.")
+        }
 
         // Task 3: Top 5 players by wicket taken
         val top5PlayersByWickets = players.sortBy(_.Wickets)(Ordering[Int].reverse).take(5)
         println("==> Top 5 players by wicket taken:")
-        top5PlayersByWickets.foreach(p => println(s" ${p.Name} from ${p.Country} with ${p.Wickets} wickets."))
+        top5PlayersByWickets.zipWithIndex.map { case (p, i) =>
+            println(s" ${i + 1}. ${p.Name} from ${p.Country} with ${p.Wickets} wickets.")
+        }
 
         // Task 4: Rank players with overall performance give weight 5x to wicket taken and (5/100)x to run scored
         val rankedPlayers = players.sortBy(p => (p.Wickets * 5 + p.Runs * 5 / 100.0))(Ordering[Double].reverse)
