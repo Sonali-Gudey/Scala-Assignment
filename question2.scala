@@ -27,15 +27,19 @@ object question2 {
         // Task 4: Rank players with overall performance give weight 5x to wicket taken and (5/100)x to run scored
         val rankedPlayers = players.sortBy(p => (p.Wickets * 5 + p.Runs * 5 / 100.0))(Ordering[Double].reverse)
         println("==> Ranking of players based on overall performance:")
+        // The rankedPlayers list pairs each Player object with its corresponding index in the list.
         rankedPlayers.zipWithIndex.foreach { case (p, i) =>
             println(s" ${i + 1}. ${p.Name} from ${p.Country} with ${p.Runs} runs and ${p.Wickets} wickets, overall score ${p.Wickets * 5 + p.Runs * 5 / 100.0}")
         }
     }
 
     private def read_data_from_file(): List[Player] = {
-        Source.fromFile("//Users//sonali_gudey//Desktop//player_stats.txt").getLines()
+        Source.fromFile("//Users//sonali_gudey//Desktop//player_stats.txt")
+            .getLines()
+            // Mapping the line and object created
             .map(line => {
                 val Array(year, name, country, matches, runs, wickets) = line.split(", ")
+                // Creating objects from the fecthed values above
                 Player(year.toInt, name, country, matches.toInt, runs.toInt, wickets.toInt)
             })
             .toList
