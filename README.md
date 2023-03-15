@@ -58,7 +58,8 @@ object question1 {
 ```
 
 ##### Output:
-<img width="398" alt="Screenshot 2023-03-14 at 12 40 12 PM" src="https://user-images.githubusercontent.com/123619701/224928659-1d5dbdf8-053e-4b3b-ae1d-ab6d4ad7af42.png">
+<img width="512" alt="Screenshot 2023-03-15 at 12 22 25 PM" src="https://user-images.githubusercontent.com/123619701/225230346-7e9eff60-ef00-4b90-8d20-b9df6d6c3f4c.png">
+
 
 
 #### Question-2
