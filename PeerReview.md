@@ -49,3 +49,9 @@ Sorted the list in descending order based on the wickets taken by the players us
 ##### Task-4:
 Sorted the list in descending order based on the performance taken by the players using sortwith function and then the rank of players is printed by a user-defined function.
 
+#### Comparision:
+- In the first question, Shubham calculated the integer and decimal parts of the input value seperately and finds the range to which it belongs to and appends it to the outputBucket ArrayBuffer, Shikhar on the other hand done this question in the similar way as me by using last two digits of the value of the input, using an if else condition we found the range. Shubham's code has more functionality as compared to Shikhar's and mine.
+- In the second question, task-1, Shikhar used a loop to find the player with the highest runs while me and Shubham used maxBy function to find the player with the highest runs.
+- In the second question, task-2, Shikhar and Shubham used a loop to iterate through the top 5 players and print their details with a numbering. They also sorted the players by runs scored in descending order using sortBy method and then reversing it. I used the 'zipWithIndex' method to iterate through the top 5 players and sorted the players by runs scored in descending order using 'sortBy' method and an ordering defined by 'Ordering[Int].reverse'.
+- In the second question, task-3, Shikhar used functional programming concepts like sortBy, take, and foreach, Shubham used a while loop to iterate over the top 5 players, while I used a 'zipWithIndex' method to print each player's rank along with their details.
+- In the second question, task-4, Shubham used a 'map' method to transform each player object into a tuple containing the player's name and their overall performance score. The formula for calculating the overall performance score is slightly different in each of our codes.
